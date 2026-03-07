@@ -1,0 +1,7 @@
+# tmux plugins installed by setup script
+plugins/
+
+# editor temp files
+*~
+*.swp
+*.swo
