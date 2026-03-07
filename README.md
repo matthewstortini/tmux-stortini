@@ -21,7 +21,7 @@ Plugins used:
 
 ## Installation
 
-Clone the repository:
+Clone the repository and run setup:
 
 ```bash
 git clone https://github.com/matthewstortini/tmux-stortini.git
