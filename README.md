@@ -87,29 +87,19 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 ### Starting and attaching
 
 - Start a new tmux session:
-  ```bash
-  tmux
-  ```
+  `tmux`
 
 - Start a new named session:
-  ```bash
-  tmux new -s mysession
-  ```
+  `tmux new -s mysession`
 
 - Attach to the most recent session:
-  ```bash
-  tmux attach
-  ```
+  `tmux attach`
 
 - Attach to a specific named session:
-  ```bash
-  tmux attach -t mysession
-  ```
+  `tmux attach -t mysession`
 
 - List sessions:
-  ```bash
-  tmux ls
-  ```
+  `tmux ls`
 
 - Detach from session  
   `prefix + d`
@@ -119,19 +109,13 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 ### Renaming and killing sessions
 
 - Rename the current session
-  ```bash
-  tmux rename-session newname
-  ```
+  `tmux rename-session newname`
 
 - Kill a specific session
-  ```bash
-  tmux kill-session -t mysession
-  ```
+  `tmux kill-session -t mysession`
 
 - Kill all sessions / stop tmux server
-  ```bash
-  tmux kill-server
-  ```
+  `tmux kill-server`
 
 ---
 
@@ -162,9 +146,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
   `prefix + .`
 
 - Swap two windows
-  ```
-  prefix + :swap-window -s <source-window-number> -t <target-window-number>
-  ```
+  `prefix + :swap-window -s <source-window-number> -t <target-window-number>`
 
 ---
 
