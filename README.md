@@ -86,107 +86,107 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 
 ### Starting and attaching
 
-- Start a new tmux session:
+- Start a new tmux session: 
   `tmux`
 
-- Start a new named session:
+- Start a new named session:    
   `tmux new -s mysession`
 
-- Attach to the most recent session:
+- Attach to the most recent session:    
   `tmux attach`
 
-- Attach to a specific named session:
+- Attach to a specific named session:   
   `tmux attach -t mysession`
 
-- List sessions:
+- List sessions:    
   `tmux ls`
 
-- Detach from session  
+- Detach from session:  
   `prefix + d`
 
 ---
 
 ### Renaming and killing sessions
 
-- Rename the current session
+- Rename the current session:   
   `tmux rename-session newname`
 
-- Kill a specific session
+- Kill a specific session:  
   `tmux kill-session -t mysession`
 
-- Kill all sessions / stop tmux server
+- Kill all sessions / stop tmux server: 
   `tmux kill-server`
 
 ---
 
 ### Windows
 
-- Create a new window  
+- Create a new window:  
   `prefix + c`
 
-- Rename the current window  
+- Rename the current window:  
   `prefix + ,`
 
-- List all windows  
+- List all windows:  
   `prefix + w`
 
-- Switch to window by number  
-  `prefix + 0` through `prefix + 9`
+- Switch to window by number:  
+  `prefix + 0..9`
 
-- Move to next window  
+- Move to next window:  
   `prefix + n`
 
-- Move to previous window  
+- Move to previous window:  
   `prefix + p`
 
-- Close current window  
+- Close current window:  
   `prefix + &`
 
-- Move current window to a new index  
+- Move current window to a new index:  
   `prefix + .`
 
-- Swap two windows
+- Swap two windows: 
   `prefix + :swap-window -s <source-window-number> -t <target-window-number>`
 
 ---
 
 ### Panes
 
-- Split horizontally (top / bottom)  
+- Split horizontally (top / bottom):  
   `prefix + "`
 
-- Split vertically (left / right)  
+- Split vertically (left / right):  
   `prefix + %`
 
-- Move between panes  
+- Move between panes:  
   `Ctrl-h`  
   `Ctrl-j`  
   `Ctrl-k`  
   `Ctrl-l`
 
-- Resize panes  
+- Resize panes: 
   `Alt-h`  
   `Alt-j`  
   `Alt-k`  
   `Alt-l`
 
-- Close current pane  
+- Close current pane:  
   `prefix + x`
 
-- Convert pane into a new window  
+- Convert pane into a new window:  
   `prefix + !`
 
-- Show pane numbers (quick pane selection)  
+- Show pane numbers:    
   `prefix + q`
 
-- Toggle pane zoom  
+- Toggle pane zoom (and unzoom):  
   `prefix + z`
 
 ---
 
 ### Reloading config
 
-- Reload tmux config from inside tmux  
+- Reload tmux config from inside tmux:  
   `prefix + r`
 
 ---
