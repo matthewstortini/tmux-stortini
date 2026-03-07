@@ -86,7 +86,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 
 ### Starting and attaching
 
-- Start a new tmux session: 
+- Start a new tmux session:     
   `tmux`
 
 - Start a new named session:    
@@ -114,7 +114,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 - Kill a specific session:  
   `tmux kill-session -t mysession`
 
-- Kill all sessions / stop tmux server: 
+- Kill all sessions / stop tmux server:     
   `tmux kill-server`
 
 ---
@@ -145,7 +145,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 - Move current window to a new index:  
   `prefix + .`
 
-- Swap two windows: 
+- Swap two windows:     
   `prefix + :swap-window -s <source-window-number> -t <target-window-number>`
 
 ---
