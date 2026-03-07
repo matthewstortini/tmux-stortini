@@ -56,13 +56,13 @@ grep -E "set -g @plugin" "$TMUX_CONF_SOURCE" \
       echo "Linked ~/.tmux/plugins/$repo_name -> $repo_clone_dir"
     done
 
-    echo "Done."
-    echo
-    echo "~/.tmux.conf now links to:"
-    echo "  $TMUX_CONF_SOURCE"
-    echo
-    echo "~/.tmux/plugins now contains symlinks to:"
-    echo "  $REPO_PLUGIN_DIR"
-    echo
-    echo "To activate the config:"
-    echo "  tmux source-file ~/.tmux.conf"
+echo "Done."
+echo
+echo "~/.tmux.conf now links to:"
+echo "  $TMUX_CONF_SOURCE"
+echo
+echo "~/.tmux/plugins now contains symlinks to:"
+echo "  $REPO_PLUGIN_DIR"
+echo
+echo "To activate the config:"
+echo "  tmux source-file ~/.tmux.conf"
