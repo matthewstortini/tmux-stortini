@@ -12,7 +12,7 @@ This repository contains a `tmux.conf` and a setup script that installs the conf
 ## Features
 
 - Prefix rebound from the tmux default to `Ctrl-s` (`C-s`)
-- Efficient pane switching with Vim-style directional bindings:
+- Efficient pane switching with directional bindings shared with Neovim:
   - `Ctrl-h` move left
   - `Ctrl-j` move down
   - `Ctrl-k` move up
@@ -22,6 +22,7 @@ This repository contains a `tmux.conf` and a setup script that installs the conf
   - `Alt-j` resize down by 5
   - `Alt-k` resize up by 5
   - `Alt-l` resize right by 5
+- Seamless pane navigation and resizing between tmux and Neovim using **smart-splits.nvim**
 - Reload binding:
   - `prefix + r` reloads `~/.tmux.conf` and shows a confirmation message
 - Catppuccin-themed status line with a minimal layout
@@ -34,13 +35,13 @@ This repository contains a `tmux.conf` and a setup script that installs the conf
 This configuration currently uses three tmux plugins:
 
 - `tmux-plugins/tpm`  
-  TPM (Tmux Plugin Manager). This is the plugin manager responsible for loading and managing the other tmux plugins. The config finishes by running TPM from `~/.tmux/plugins/tpm/tpm`. 
+  TPM (Tmux Plugin Manager). This is the plugin manager responsible for loading and managing the other tmux plugins. The config finishes by running TPM from `~/.tmux/plugins/tpm/tpm`.
 
 - `catppuccin/tmux`  
   Provides the Catppuccin theme and status line integration. This config uses it to build the right side of the status line and customize window text styling and colors.
 
-- `christoomey/vim-tmux-navigator`  
-  Intended for smoother navigation between tmux panes and Neovim splits in a shared workflow with the companion Neovim config. It is installed through TPM like the other plugins.
+- `mrjones2014/smart-splits.nvim`  
+  Provides coordinated pane navigation and resizing between tmux panes and Neovim splits. When used together with the companion Neovim configuration, the same keybindings work across both environments.
 
 ---
 
@@ -77,7 +78,7 @@ If tmux is not already running, just start tmux normally and it will read `~/.tm
 Because `~/.tmux.conf` is a symlink to the repository file created by the setup script, you can edit the repository `tmux.conf` directly. After saving changes, reload tmux with:
 
 - `prefix + r`, or
-- `tmux source-file ~/.tmux.conf` 
+- `tmux source-file ~/.tmux.conf`
 
 ---
 
@@ -85,19 +86,19 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 
 ### Starting and attaching
 
-- Start a new tmux session:     
+- Start a new tmux session:  
   `tmux`
 
-- Start a new named session:    
+- Start a new named session:  
   `tmux new -s mysession`
 
-- Attach to the most recent session:    
+- Attach to the most recent session:  
   `tmux attach`
 
-- Attach to a specific named session:   
+- Attach to a specific named session:  
   `tmux attach -t mysession`
 
-- List sessions:    
+- List sessions:  
   `tmux ls`
 
 - Detach from session:  
@@ -107,13 +108,13 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 
 ### Renaming and killing sessions
 
-- Rename the current session:   
+- Rename the current session:  
   `tmux rename-session newname`
 
 - Kill a specific session:  
   `tmux kill-session -t mysession`
 
-- Kill all sessions / stop tmux server:     
+- Kill all sessions / stop tmux server:  
   `tmux kill-server`
 
 ---
@@ -144,7 +145,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 - Move current window to a new index:  
   `prefix + .`
 
-- Swap two windows:     
+- Swap two windows:  
   `prefix + :swap-window -s <source-window-number> -t <target-window-number>`
 
 ---
@@ -163,7 +164,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
   `Ctrl-k`  
   `Ctrl-l`
 
-- Resize panes: 
+- Resize panes:  
   `Alt-h`  
   `Alt-j`  
   `Alt-k`  
@@ -175,7 +176,7 @@ Because `~/.tmux.conf` is a symlink to the repository file created by the setup 
 - Convert pane into a new window:  
   `prefix + !`
 
-- Show pane numbers:    
+- Show pane numbers:  
   `prefix + q`
 
 - Toggle pane zoom (and unzoom):  
