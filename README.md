@@ -51,7 +51,6 @@ Clone the repository and run setup:
 ```bash
 git clone git@github.com:matthewstortini/tmux-stortini.git
 cd tmux-stortini
-chmod +x setup_tmux_configuration.sh
 ./setup_tmux_configuration.sh
 ```
 
